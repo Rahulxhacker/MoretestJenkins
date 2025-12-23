@@ -25,9 +25,9 @@ public class TestParallel {
 	@Test
 	public void doSearch(String browser) throws MalformedURLException, InterruptedException {
 		if(browser.equals("chrome")) {
-			cap = new ChromeOptions();
+			cap = new ChromeOptions(); //chrome browser will open
 		}else if(browser.equals("edge")) {
-			cap = new EdgeOptions();
+			cap = new EdgeOptions(); //edge browser will open
 		}
 		
 		driver.set(new RemoteWebDriver(URI.create("http://192.168.47.116:4444/wd/hub").toURL(),cap));
